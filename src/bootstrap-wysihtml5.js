@@ -353,7 +353,7 @@
         bypassDefaults: function(options) {
             return this.each(function () {
                 var $this = $(this);
-                $this.data('wysihtml5', new Wysihtml5($this, options));
+                $this.data('wysihtml5', new Wysihtml5($this, $.extend({},options}));
             });
         },
         shallowExtend: function (options) {
